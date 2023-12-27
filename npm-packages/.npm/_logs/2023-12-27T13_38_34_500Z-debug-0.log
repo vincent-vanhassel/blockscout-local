@@ -1,0 +1,78 @@
+0 verbose cli /Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/bin/node /Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/bin/npm
+1 info using npm@9.5.1
+2 info using node@v18.16.1
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 0ms
+10 timing config:load:file:/Users/vincent.vanhassel/.npmrc Completed in 3ms
+11 timing config:load:user Completed in 3ms
+12 timing config:load:file:/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:setEnvs Completed in 1ms
+15 timing config:load Completed in 9ms
+16 timing npm:load:configload Completed in 9ms
+17 timing npm:load:mkdirpcache Completed in 0ms
+18 timing npm:load:mkdirplogs Completed in 0ms
+19 verbose title npm install 8.19.4
+20 verbose argv "install" "--global" "8.19.4"
+21 timing npm:load:setTitle Completed in 19ms
+22 timing config:load:flatten Completed in 3ms
+23 timing npm:load:display Completed in 4ms
+24 verbose logfile logs-max:10 dir:/Users/vincent.vanhassel/.npm/_logs/2023-12-27T13_38_34_500Z-
+25 verbose logfile /Users/vincent.vanhassel/.npm/_logs/2023-12-27T13_38_34_500Z-debug-0.log
+26 timing npm:load:logFile Completed in 4ms
+27 timing npm:load:timers Completed in 0ms
+28 timing npm:load:configScope Completed in 0ms
+29 timing npm:load Completed in 38ms
+30 timing config:load:flatten Completed in 0ms
+31 timing arborist:ctor Completed in 0ms
+32 silly logfile start cleaning logs, removing 3 files
+33 timing idealTree:init Completed in 4ms
+34 timing idealTree:userRequests Completed in 4ms
+35 silly idealTree buildDeps
+36 silly fetch manifest 8.19.4@*
+37 silly logfile done cleaning log files
+38 http fetch GET 404 https://registry.npmjs.org/8.19.4 816ms (cache skip)
+39 http fetch GET 404 https://registry.npmjs.org/8.19.4 678ms (cache skip)
+40 silly placeDep ROOT 8.19.4@ OK for:  want: *
+41 timing idealTree:#root Completed in 1503ms
+42 timing idealTree:node_modules/8.19.4 Completed in 0ms
+43 timing idealTree:buildDeps Completed in 1504ms
+44 timing idealTree:fixDepFlags Completed in 1ms
+45 timing idealTree Completed in 1514ms
+46 timing command:install Completed in 1521ms
+47 verbose stack HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/8.19.4 - Not found
+47 verbose stack     at /Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/check-response.js:95:15
+47 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+47 verbose stack     at async RegistryFetcher.packument (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/pacote/lib/registry.js:87:19)
+47 verbose stack     at async RegistryFetcher.manifest (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/pacote/lib/registry.js:118:23)
+47 verbose stack     at async [nodeFromEdge] (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1059:19)
+47 verbose stack     at async [buildDepStep] (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:929:11)
+47 verbose stack     at async Arborist.buildIdealTree (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:207:7)
+47 verbose stack     at async Arborist.reify (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:159:5)
+47 verbose stack     at async Install.exec (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/lib/commands/install.js:146:5)
+47 verbose stack     at async module.exports (/Users/vincent.vanhassel/.nvm/versions/node/v18.16.1/lib/node_modules/npm/lib/cli.js:134:5)
+48 verbose statusCode 404
+49 verbose pkgid 8.19.4@*
+50 verbose cwd /Users/vincent.vanhassel/BNP/sandbox/Hyperledger-Besu/Ethereum-Besu/blockscout-5.1.3-beta/apps/explorer
+51 verbose Darwin 21.6.0
+52 verbose node v18.16.1
+53 verbose npm  v9.5.1
+54 error code E404
+55 error 404 Not Found - GET https://registry.npmjs.org/8.19.4 - Not found
+56 error 404
+57 error 404  '8.19.4@*' is not in this registry.
+58 error 404
+58 error 404 Note that you can also install from a
+59 error 404 tarball, folder, http url, or git url.
+60 verbose exit 1
+61 timing npm Completed in 1580ms
+62 verbose unfinished npm timer reify 1703684314556
+63 verbose unfinished npm timer reify:loadTrees 1703684314559
+64 verbose code 1
+65 error A complete log of this run can be found in:
+65 error     /Users/vincent.vanhassel/.npm/_logs/2023-12-27T13_38_34_500Z-debug-0.log

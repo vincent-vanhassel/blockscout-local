@@ -1,0 +1,81 @@
+# npm resolution error report
+
+2023-06-06T14:24:24.472Z
+
+While resolving: black-dashboard-react@1.2.2
+Found: react@18.2.0
+node_modules/react
+  react@"18.2.0" from the root project
+
+Could not resolve dependency:
+peer react@"^16.8.0 || ^17.0.0" from react-chartjs-2@3.3.0
+node_modules/react-chartjs-2
+  react-chartjs-2@"3.3.0" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "react",
+    "version": "18.2.0",
+    "whileInstalling": {
+      "name": "black-dashboard-react",
+      "version": "1.2.2",
+      "path": "/Users/vincent.vanhassel/production/W-Capital"
+    },
+    "location": "node_modules/react",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "react",
+        "spec": "18.2.0",
+        "from": {
+          "location": "/Users/vincent.vanhassel/production/W-Capital"
+        }
+      }
+    ]
+  },
+  "currentEdge": {
+    "type": "prod",
+    "name": "react",
+    "spec": "18.2.0",
+    "from": {
+      "location": "/Users/vincent.vanhassel/production/W-Capital"
+    }
+  },
+  "edge": {
+    "type": "peer",
+    "name": "react",
+    "spec": "^16.8.0 || ^17.0.0",
+    "error": "INVALID",
+    "from": {
+      "name": "react-chartjs-2",
+      "version": "3.3.0",
+      "whileInstalling": {
+        "name": "black-dashboard-react",
+        "version": "1.2.2",
+        "path": "/Users/vincent.vanhassel/production/W-Capital"
+      },
+      "location": "node_modules/react-chartjs-2",
+      "isWorkspace": false,
+      "dependents": [
+        {
+          "type": "prod",
+          "name": "react-chartjs-2",
+          "spec": "3.3.0",
+          "from": {
+            "location": "/Users/vincent.vanhassel/production/W-Capital"
+          }
+        }
+      ]
+    }
+  },
+  "strictPeerDeps": false,
+  "force": false
+}

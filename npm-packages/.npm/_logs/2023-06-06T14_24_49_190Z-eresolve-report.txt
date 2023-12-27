@@ -1,0 +1,18 @@
+'Log files:
+/Users/vincent.vanhassel/.npm/_logs/2023-06-06T14_24_49_190Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: black-dashboard-react@1.2.2
+Found: react@18.2.0
+node_modules/react
+  react@"18.2.0" from the root project
+
+Could not resolve dependency:
+peer react@"^16.8.0 || ^17.0.0" from react-chartjs-2@3.3.0
+node_modules/react-chartjs-2
+  react-chartjs-2@"3.3.0" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
