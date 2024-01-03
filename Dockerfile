@@ -69,22 +69,29 @@ ADD . .
 COPY . .
 
 RUN mix compile
-# RUN mkdir /npm-packages
-# COPY npm-packages/npm.tgz /npm-packages/npm.tgz
-COPY npm-packages/.npm /.npm
-ENV NPM_CONFIG_CACHE=/.npm
-# WORKDIR /npm-packages
-# RUN tar -xzf npm.tgz
-# RUN npm install -g .
+COPY npm-packages/.npm /root/.npm
+ENV NPM_CONFIG_CACHE=/root/.npm
+
+# COPY ./apk-packages/xz-5.2.5-r1.apk /tmp/xz.apk
+# RUN apk add --no-cache --allow-untrusted /tmp/xz.apk
+
+# COPY binaries/node-v18.18.2-linux-x64.tar.xz /tmp/
+# RUN tar -xJf /tmp/node-v18.18.2-linux-x64.tar.xz -C /usr/local --strip-components=1
+# RUN rm /tmp/node-v18.18.2-linux-x64.tar.xz
+
+# COPY binaries/npm-8.19.4.tgz /tmp/npm.tgz
+# RUN tar -xzf /tmp/npm.tgz -C /tmp
+# RUN cd /tmp/package
+# RUN npm install -g
 
 # Add blockscout npm deps
 
 WORKDIR /app/apps/block_scout_web/assets/
-RUN npm ci --offline || npm install --offline
-RUN npm run deploy
+RUN npm ci --offline
+# RUN npm run deploy
 WORKDIR /app/apps/explorer/
-RUN npm ci --offline || npm install --offlin
-RUN npm run deploy
+RUN npm ci --offline
+# RUN npm run deploy
 WORKDIR /app
 RUN apk del --force-broken-world alpine-sdk gmp-dev automake libtool inotify-tools autoconf python3
 
@@ -104,6 +111,7 @@ ENV BLOCKSCOUT_VERSION=${BLOCKSCOUT_VERSION}
 
 COPY ./apk-packages/jq.apk /tmp/apk-packages/jq.apk
 RUN apk add --no-cache --allow-untrusted /tmp/apk-packages/jq.apk
+RUN rm -v /tmp/apk-packages/*.apk
 
 WORKDIR /app
 
